@@ -1,0 +1,265 @@
+body
+{
+	width:100;
+	overflow-x:hidden;
+	height:100vh;
+	color:black;
+	font-family:Apple LiGothic, sans-serif; 
+	background:linear-gradient(-45deg,#F4D689,#A5DEE4,#DAC9A6,#7DB9DE);
+	position:relative;
+	background-size:600% 1000%;
+	animation: change 25s ease-in-out infinite;
+}
+
+
+@keyframes change {
+	0%{
+		background-position:0 50%;
+	}
+	50%{
+		background-position:100% 50%;
+	}
+	100%{
+		background-position:0 50%;
+	}
+}
+
+.container{
+	width:80%;
+	margin:0 auto;
+}
+
+section h1
+{
+	padding:0;
+	left:0;
+	top:22vh;
+	position:relative;
+	font-size:5.5em;
+	text-transform:uppercase;
+	font-weight:1000;
+	color:black;
+	font-family:Apple LiGothic, sans-serif; 
+	-webkit-background-clip:text;
+	-webkit-text-fill-color:transparent;
+	background-attachment:fixed;
+	text-align:center;
+}
+section:nth-child(1) h1
+{
+	background-image:url(https://lithub.com/wp-content/uploads/2020/03/Screen-Shot-2020-04-04-at-1.24.54-AM.png);
+}
+
+header{
+	background-color:rgba(0,0,0,0.2);
+	width:100%;
+	margin:0;
+	top:0;
+	left:0;
+	display:flex;
+	position:fixed;
+	align-items:center;
+	padding:0;
+}
+
+nav ul{
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+nav li{
+    display:inline-block;
+    margin-left:35px;
+    padding:20px;
+}
+nav a{
+	color:white;
+	text-decoration:none;
+	text-transform:uppercase;
+}
+nav a:hover{
+    color:#F4D689;
+}
+
+.btn{
+	display:inline-block;
+	text-decoration:none;
+	background-color:#F4D689;
+	color:#fff;
+	padding:0;
+	width:120px;
+	height:40px;
+	left:45%;
+	top:20vh;
+	line-height:43px;
+	border-radius:20px;
+	text-align:center;
+	vertical-align:middle;
+	position:relative;
+	align-items:center;
+	box-shadow:0px 2px 2px rgba(0,0,0,0.5);
+	transition:.4s;
+}
+.btn:active{
+	transform:translateY(2px);
+	-ms-transform:translateY(2px);
+	-webkit-transform:translateY(2px);
+	box-shadow:0 0 1px rgba(0,0,0,0.25);
+	border-bottom:none;
+}
+
+.snowflake{
+	margin:0;
+	padding:0;
+	left:46.5%;
+  	top:18%;
+  	z-index: 1000;
+	position:fixed;
+	width:100px;
+	height:100px;
+	animation:drop 5s linear forwards;
+}
+
+.snowflake:hover{
+	width:95px;
+	height:95px;
+	align-items:center;
+	filter:blur(1.5px);
+}
+
+@keyframes drop{
+	0%{
+		position:0;
+	}
+	100%{
+		display: block;
+		transform:translateY(60vh);
+		
+	}
+}
+.subtitle
+{
+	color:white;
+	position:relative;
+	text-align:center;
+	top:20vh;
+}
+
+.marquee-chapter-one, .marquee-chapter-two, .marquee-chapter-three, .marquee-chapter-four, .marquee-chapter-five {
+	top:20vh;
+	position:relative;
+	font-size:20px;
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+	color:white;
+	height:100vh;
+	left:50%;
+	display:flex;
+	align-items:center;
+}
+.marquee-chapter-one{
+	animation:scrollingone 160s linear infinite;
+	animation-delay:10s;
+}
+.marquee-chapter-two{
+	animation:scrollingtwo 205s linear infinite;
+	animation-delay:180s;
+}
+.marquee-chapter-three{
+	animation:scrollingthree 105s linear infinite;
+	animation-delay:395s;
+}
+.marquee-chapter-four{
+	animation:scrollingfour 67s linear infinite;
+	animation-delay:510s;
+}
+.marquee-chapter-five{
+	animation:scrollingfive 86s linear infinite;
+	animation-delay:587s;
+}
+
+
+.marquee-stop .marquee-chapter-one, 
+.marquee-stop .marquee-chapter-two, 
+.marquee-stop .marquee-chapter-three, 
+.marquee-stop .marquee-chapter-four, 
+.marquee-stop .marquee-chapter-five {
+	animation-play-state: paused
+}
+@keyframes scrollingone {
+    from {transform:translateX(0);}
+    to {transform:translateX(-410vw);}
+}
+
+@keyframes scrollingtwo {
+    from {transform:translateX(0);}
+    to {transform:translateX(-510vw);}
+}
+
+@keyframes scrollingthree {
+    from {transform:translateX(0);}
+    to {transform:translateX(-260vw);}
+}
+
+@keyframes scrollingfour {
+    from {transform:translateX(0);}
+    to {transform:translateX(-160vw);}
+}
+
+@keyframes scrollingfive {
+    from {transform:translateX(0);}
+    to {transform:translateX(-210vw);}
+}
+
+.marquee li{
+	list-style:none;
+	width:35vw;
+	flex-shrink:0;
+	margin:5vw;
+}
+
+.marquee{
+	overflow:hidden;
+	width:100%;
+}
+
+/*.marquee-chapter-one{
+	animation:scrolling 150s linear infinite;
+	animation-delay:10s;
+}*/
+
+/*#startbtn{
+	display: inline-block;
+	text-decoration:none;
+	background-color:white;
+	color:black;
+	padding:0;
+	width:120px;
+	height:40px;
+	left:45%;
+	top:20vh;
+	line-height:43px;
+	border-radius:20px;
+	text-align:center;
+	vertical-align:middle;
+	position:fixed;
+	align-items:center;
+}
+#stopbtn{
+	display:inline-block;
+	text-decoration:none;
+	background-color:white;
+	color:black;
+	padding:0;
+	width:120px;
+	height:40px;
+	left:45%;
+	top:20vh;
+	line-height:43px;
+	border-radius:20px;
+	text-align:center;
+	vertical-align:middle;
+	position:fixed;
+	align-items:center;
+	/*animation-play-state:scrolling paused;*/}
